@@ -2,16 +2,16 @@ import tkinter
 
 
 def key_pressed(event):
-    (dx, dy) = (0, 0)
+    dx, dy = 0, 0
     match event.keysym:
         case 'Up':
-            (dx, dy) = (0, -10)
+            dx, dy = 0, -10
         case 'Down':
-            (dx, dy) = (0, 10)
+            dx, dy = 0, 10
         case 'Left':
-            (dx, dy) = (-10, 0)
+            dx, dy = -10, 0
         case 'Right':
-            (dx, dy) = (10, 0)
+            dx, dy = 10, 0
     canvas.move(oval, dx, dy)
 
 
