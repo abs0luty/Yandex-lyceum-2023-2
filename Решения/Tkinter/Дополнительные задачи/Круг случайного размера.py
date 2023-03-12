@@ -3,8 +3,8 @@ import random
 
 
 def draw(event):
-    (r, x, y) = (random.randint(100, 600),
-                 random.randint(0, 600), random.randint(0, 600))
+    r, x, y = random.randint(100, 600), random.randint(
+        0, 600), random.randint(0, 600)
 
     canvas.create_oval((x, y), (x + r, y + r), fill='red')
     return

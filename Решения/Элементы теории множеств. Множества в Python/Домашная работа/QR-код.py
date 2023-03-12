@@ -1,18 +1,25 @@
-a = [set(), set(), set()]
+sick = set()
+vaccine = set()
+exemption = set()
 
-for i in range(3):
-    while True:
-        b = input()
-        if b == "":
-            break
+while True:
+    s = input()
+    if not s:
+        break
+    sick.add(s)
 
-        a[i].add(b)
+    s = input()
+    vaccine.add(s)
+
+    s = input()
+    exemption.add(s)
 
 n = int(input())
-r = set()
+codes = set()
 for i in range(n):
-    c = input()
-    if c in a[0] or c in a[1] or c in a[2]:
-        r.add(c)
+    code = input()
+    if code in sick or code in vaccine or code in exemption:
+        codes.add(code)
 
-print("\n".join(r))
+for code in codes:
+    print(code)
