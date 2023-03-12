@@ -1,25 +1,31 @@
-sick = set()
-vaccine = set()
-exemption = set()
+s1 = set()
+s2 = set()
+s3 = set()
 
 while True:
-    s = input()
-    if not s:
+    x = input().strip()
+    if x == '':
         break
-    sick.add(s)
+    s1.add(x)
 
-    s = input()
-    vaccine.add(s)
+while True:
+    x = input().strip()
+    if x == '':
+        break
+    s2.add(x)
 
-    s = input()
-    exemption.add(s)
+while True:
+    x = input().strip()
+    if x == '':
+        break
+    s3.add(x)
 
 n = int(input())
-codes = set()
+result = set()
 for i in range(n):
-    code = input()
-    if code in sick or code in vaccine or code in exemption:
-        codes.add(code)
+    query = input().strip()
+    if query in s1 or query in s2 or query in s3:
+        result.add(query)
 
-for code in codes:
-    print(code)
+for r in result:
+    print(r)
